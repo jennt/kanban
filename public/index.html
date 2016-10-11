@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Kanban</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+  <h1> To Do Lists </h1>
 
-<ul class="list"></ul>
-<form class="stufff" method="get">
-  <input type="text" name="name" class="searchId">
-  <button type="button" name="button" id="thing">search by id</button>
-</form>
+  <ul class="list"></ul>
 
-<ul class="lists"></ul>
+  <form class="stufff" method="get">
+    <input type="text" name="name" class="searchId">
+    <button type="button" name="button" class="btn" id="thing">search by id</button>
+  </form>
 
-<!-- delete input from first list -->
+  <ul class="lists"></ul>
+
+  <!-- delete input from first list -->
   <input type="text" name="name" class="remove">
   <button type="button" name="button" id="remove">delete</button>
 
-
-
+  <br>
+  <br>
+  <textarea rows="10" cols="50" id="task-title"></textarea>
+  <br>
+  <select id="task-priority">
+    <option>low</option>
+    <option>medium</option>
+    <option>high</option>
+  </select>
+  <input type="text" id="task-status" placeholder="Status">
+  <button type="button" id="task-create-btn">Create Task</button>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="app.js"></script>
-  </body>
+</body>
 </html>

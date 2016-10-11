@@ -44,7 +44,7 @@ end
                 #delete task(by id)
                 #or by title, status, priority
 delete '/api/task' do
-  task = Task.where(id: params[:id])
+  task = Task.find_by(id: params[:id])
   task.destroy
 
 end
