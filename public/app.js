@@ -1,9 +1,6 @@
-// search by id isn't working
-// delete isn't auto updating the page
 var list = $('.list')
 var searchId = $('.searchId')
 var lists = $('.lists')
-
 
 function updateTasks() {
   console.log('update tasks')
@@ -37,12 +34,10 @@ $('#thing').click(function(){
   }).done(function(task) {
     // console.log(task[0].title + " | " + task[0].status);
     lists.append('<li>' + task[0].title + ' | ' + task[0].status + '</li>')
-    // $(".searchId").value = ""
-    // $('.searchId').value = "";
+    $(".searchId").val("");
   });
-  // console.log($(".searchId").val());
-  // $(".searchId").val().reset();
 });
+
 
 $('#remove').click(function(){
   $.ajax({
@@ -54,29 +49,14 @@ $('#remove').click(function(){
   }).done(function(task) {
     console.log('done deleting task')
 
-
-
-    // console.log(task[0].title + " | " + task[0].status);
   }).fail(function(xhr, text, status) {
     console.error('an error occurred while deleting', text, status)
   });
-updateTasks()
+
+  updateTasks()
+  $(".remove").val("");
   console.log($(".remove").val());
 });
-
-
-// $.ajax({
-//   method: 'GET',
-//   url: '/api/tasks'
-// }).done(function(tasks) {
-//   tasks.forEach(function(task) {
-//     console.log(task)
-//     list.append('<li>' + task.title + ' | ' + task.status + ' | ' + task.priority + '</li>')
-//   })
-// })
-
-
-/* CREATE TASK */
 
 var $taskCreateBtn = $('#task-create-btn')
 var $taskTitle = $('#task-title')
@@ -100,7 +80,11 @@ $taskCreateBtn.click(function() {
     console.log('TASK CREATED!', task)
 
     updateTasks()
+
   }).fail(function() {
     console.error('failed to create task :(')
+
+    // (.textarea).val('')
+    // $('#task-status').val("");
   })
 })

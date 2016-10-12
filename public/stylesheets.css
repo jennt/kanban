@@ -4,17 +4,50 @@
   background-size: cover;
 }*/
 
-body{margin:40px
-auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
-10px}
+body {
+  background-color: #99ffff;
+
+  margin:40px
+  auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
+  10px}
 
 body>h1 {
-  font-family:
+  background-color: #ccffff;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 50px;
   text-align: center;
-  color: green;
+  color: #0000ff;
   /*background-color: blue;*/
 }
 
 * {
+  font-weight: bolder;
   font-family: 'Amatic SC', cursive;
+}
+
+div {
+  color: blue;
+  position: left;
+}
+
+ul {
+  color: purple;
+  font-weight: bold;
+
+}
+
+input {
+  border: solid 5px black;
+}
+
+button {
+  border: solid 5px green;
+}
+
+select {
+  border: solid 5px yellow;
+}
+
+textarea {
+  background-color: yellow;
 }
