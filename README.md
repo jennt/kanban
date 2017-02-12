@@ -4,7 +4,7 @@
 
 ## Synopsis
 
-This ruby program is a game of pick up sticks currently designed to take 2 players through a game.
+To do list
 
 ## Code Example
 ```ruby   
@@ -20,7 +20,7 @@ end
 ## Motivation
 Purposes for developing this program include:
   * To practice designing and building REST architecture
-  * To practice designing and building REST API with Sinatra
+  * To practice designing and building REST APIs with Sinatra
   * Design and build a data-driven JavaScript UI w/ Ajax
 
 ## Authors
